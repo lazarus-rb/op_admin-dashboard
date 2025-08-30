@@ -1,0 +1,114 @@
+/* CSS Reset courtesy of https://www.joshwcomeau.com/css/custom-css-reset/ */
+
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  /* 4. Add accessible line-height */
+  line-height: 1.5;
+  /* 5. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 6. Improve media defaults */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 7. Inherit fonts for form controls */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* 9. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+/*
+  10. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+
+/* Stylesheet */
+
+html, body {
+    height: 100%;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(10, 10%);
+    grid-template-rows: repeat(10, 10%);    
+    background-color: black;
+    height:100%;
+}
+
+#header {
+    background-color: whitesmoke;
+    grid-column: 3 / 11;
+    grid-row: 1 / 3;
+}
+
+#sidebar {
+    background-color: rgb(82, 143, 255);
+    grid-column: 1 / 3;
+    grid-row: 1 / 11;
+    display: flex;
+    gap: 25px;
+    flex-direction: column;
+    font-family: Roboto;
+    font-weight:600;
+    color: whitesmoke;
+
+}
+
+#sidebar p {
+
+    font-size: max(2.5vmin, 30px);
+    padding-left: 15px;
+    padding-top: 10px;
+}
+
+#sidebar ul {
+    list-style: none;
+}
+
+#sidebar li {
+    font-size: max(2vmin, 20px);
+    word-wrap: break-word;
+    width: 100%;
+    padding-top: 10px;
+}
+
+#content {
+    background-color: rgb(205, 217, 221);
+    grid-column: 3 / 11;
+    grid-row: 3 / 11;
+
+}
