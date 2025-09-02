@@ -101,7 +101,7 @@ html, body {
 #sidebar {
     background-color: rgb(82, 143, 255);
     grid-column: 1 / 3;
-    grid-row: 1 / 11;
+    grid-row: 1 / 20;
     display: flex;
     align-items: center;
     gap: 25px;
@@ -160,7 +160,7 @@ html, body {
 #content {
     background-color: rgb(205, 217, 221);
     grid-column: 3 / 11;
-    grid-row: 3 / 11;
+    grid-row: 3 / auto-fill;
     display: grid;
     grid-template-columns: 4fr 1.5fr;
     grid-template-rows: repeat(4, 1fr);
@@ -270,6 +270,9 @@ html, body {
   max-height: 100px;
 }
 
+.announcement h3 {
+  font-size:larger;
+}
 
 hr {
   color: lightgrey;
